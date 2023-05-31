@@ -1,0 +1,7 @@
+链接sudo ssh -i /Users/zct/.ssh/auroral_last_1 centos@130.238.28.85 -p 22
+
+启动nohup java -jar -server /home/centos/AnswerCollection/target/AnswerCollection-1.0-SNAPSHOT.jar &
+
+问题/var/root/.ssh/known_hosts
+
+http://130.238.28.85:8080/question.html
