@@ -6,6 +6,7 @@ import com.liu.DataSubmitVo;
 import com.liu.data.DataSourceMap;
 import com.liu.mapper.DataMapper;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.ServletException;
 import java.io.IOException;
 import java.util.Date;
+import java.util.Map;
 
 /**
  * @author zhengchentong on 2019-06-15
@@ -25,6 +27,11 @@ public class DataController {
 
     public DataController(DataMapper dataMapper) {
         this.dataMapper = dataMapper;
+    }
+
+    @RequestMapping("/loadData")
+    public Map<Object, Object> loadData() {
+        return dataMapper.loadData();
     }
 
     @PostMapping("/submit")
