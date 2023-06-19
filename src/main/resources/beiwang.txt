@@ -1,6 +1,6 @@
 链接sudo ssh -i /Users/zct/.ssh/auroral_last_1 centos@130.238.28.85 -p 22
 
-启动nohup java -jar -server /home/centos/AnswerCollection/target/AnswerCollection-1.0-SNAPSHOT.jar &
+启动nohup java -jar -server AnswerCollection-1.0-SNAPSHOT.jar &
 
 问题/var/root/.ssh/known_hosts
 
@@ -35,3 +35,41 @@ D6bM4QKBgBFdzjjTPUFgq5l9XgVKf5HOfH705f/r9eB+c7WJpx6Len2z6dqH8K58
 Nr7MWW0jXXu1Avi51VbE0AFHKZxm3Teji5g6Pq0MsnuJalkLDifEN5F30kiCn1D/
 15AbSV0BotXlZdabzd6rSLLilGa/HFYG7dhr0TOIRUMQjFpMBL7J
 -----END RSA PRIVATE KEY-----
+
+
+
+-- auto-generated definition
+create table question_collection
+(
+    id           bigint auto_increment
+        primary key,
+    q1           varchar(128)                       not null,
+    q1_string    varchar(128)                       not null,
+    q2           varchar(128)                       not null,
+    q2_string    varchar(128)                       not null,
+    q3           varchar(128)                       not null,
+    q3_string    varchar(128)                       not null,
+    q4_string    varchar(128)                       not null,
+    q5           varchar(128)                       not null,
+    q5_string    varchar(128)                       not null,
+    q6_string    varchar(128)                       null,
+    q7           varchar(128)                       not null,
+    q7_string    varchar(128)                       not null,
+    q8_string    varchar(128)                       not null,
+    create_time  datetime default CURRENT_TIMESTAMP not null,
+    q61          varchar(128)                       null,
+    q61_string   varchar(128)                       null,
+    q62          varchar(128)                       null,
+    q62_string   varchar(128)                       null,
+    q63          varchar(128)                       null,
+    q63_string   varchar(128)                       null,
+    q64          varchar(128)                       null,
+    q65          varchar(128)                       null,
+    q66          varchar(128)                       null,
+    q67          varchar(128)                       null,
+    f4UserResult varchar(128)                       null,
+    f5DataResult varchar(128)                       null,
+    shortData    varchar(128)                       null,
+    shortResult  varchar(128)                       null,
+    fullResult   varchar(128)                       null
+);
