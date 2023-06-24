@@ -73,3 +73,21 @@ create table question_collection
     shortResult  varchar(128)                       null,
     fullResult   varchar(128)                       null
 );
+
+
+激光节点
+access point
+账号密码test321  test321
+agid 7b83559a-c0db-4d9d-aae1-ef29a298ee71
+
+auroral
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxPfiVdHUH4IE24lgLtvh
+/QKG1c8U9rtrqt88I3PzRfoFYp4v+3gNZ/rVXif3LvTAd11MM8GIT2JD2TvtAxut
+MKhYCdRJzHSMDbN6lo6Ivd0OXEr8ugXa56jKc5Jk4DfoT8IOoxHGUN1v2MbX+3OW
+cwsaHZzUFTyhRpwVEF4iimMWHVs64Xm0azObI6lfY9FYiEgzumnVn6R7u1UfBzHB
+duYJPwVDecoP5kDX8nhAiQAzUWuVBreP7pANsLy9U/0LTV+CUb1EaS/FTaycFVdP
+Mb3hMnvJ3Ih55WCPZuAssciveqm/1Xeh78MgwLjFcLTjmD+Like/yPMfvwc75xja
+5wIDAQAB
+-----END PUBLIC KEY-----
+
