@@ -52,6 +52,17 @@
                         <span style="text-align: left;display:block;"> If you want to take the next step of energy renovation, please contact the relevant municipalities energy advisor first.</span>
                     </div>
 
+                    <!--返回-->
+                    <div class="question_form" style="text-align:center">
+                        <div class="question_form_content">
+                            <div class></div>
+                            <button class="button_submit" onclick="back()">
+                                <div class="button_content">return</div>
+                            </button>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -378,6 +389,10 @@
         var r = window.location.search.substr(1).match(reg);  //匹配目标参数
         if (r != null) return unescape(r[2]);
         return null; //返回参数值
+    }
+
+    function back(){
+        window.location.href="question.html";
     }
 </script>
 
