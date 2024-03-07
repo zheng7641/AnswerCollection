@@ -113,6 +113,9 @@ public class DataController {
             } else if ("4".equals(dataSubmitVo.getQuestion_7())) {
                 double v = question8DoubleValue * 5.86152;
                 question8DoubleValue = question8DoubleValue + v;
+            } else if ("6".equals(dataSubmitVo.getQuestion_7())) {
+                double v = question8DoubleValue;
+                question8DoubleValue = question8DoubleValue + v;
             }
         }
 

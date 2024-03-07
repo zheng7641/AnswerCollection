@@ -110,12 +110,12 @@
                                 </div>
                                 <div class="question_form_element">
                                     <div class="radio">
-                                        <input id="question2_answer1" type="radio" name="question2" value="1" checked>
-                                        <label for="question2_answer1">1961-1980</label>
-                                    </div>
-                                    <div class="radio">
                                         <input id="question2_answer2" type="radio" name="question2" value="2">
                                         <label for="question2_answer2">until 1960</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input id="question2_answer1" type="radio" name="question2" value="1" checked>
+                                        <label for="question2_answer1">1961-1980</label>
                                     </div>
                                     <div class="radio">
                                         <input id="question2_answer3" type="radio" name="question2" value="3">
@@ -405,17 +405,21 @@
                                         <input id="question7_answer1" type="radio" name="question7" value="1" checked>
                                         <label for="question7_answer1">Fuel oil</label>
                                     </div>
-                                    <div class="radio">
-                                        <input id="question7_answer2" type="radio" name="question7" value="2">
-                                        <label for="question7_answer2">Natural gas</label>
-                                    </div>
+<!--                                    <div class="radio">-->
+<!--                                        <input id="question7_answer2" type="radio" name="question7" value="2">-->
+<!--                                        <label for="question7_answer2">Natural gas</label>-->
+<!--                                    </div>-->
                                     <div class="radio">
                                         <input id="question7_answer3" type="radio" name="question7" value="3">
                                         <label for="question7_answer3">Firewood</label>
                                     </div>
+<!--                                    <div class="radio">-->
+<!--                                        <input id="question7_answer4" type="radio" name="question7" value="4">-->
+<!--                                        <label for="question7_answer4">Lignite Briquette</label>-->
+<!--                                    </div>-->
                                     <div class="radio">
-                                        <input id="question7_answer4" type="radio" name="question7" value="4">
-                                        <label for="question7_answer4">Lignite Briquette</label>
+                                        <input id="question7_answe6" type="radio" name="question7" value="6">
+                                        <label for="question7_answer6">District heating</label>
                                     </div>
                                     <div class="radio">
                                         <input id="question7_answer5" type="radio" name="question7" value="5">
@@ -430,7 +434,7 @@
                             <div class="question_form_content">
                                 <div class></div>
                                 <div class="question_form_title">
-                                    <span id="question_8_num">8</span><span id="question_8_content">.Fuel oil consumption in a year (in liters)</span>
+                                    <span id="question_8_num">8</span><span id="question_8_content">.Fuel oil consumption in a year (in liters)（roughly 500 kg/m³）</span>
                                     <span class="bidatixing">*</span>
                                 </div>
                                 <div class="question_form_title_2">
@@ -455,7 +459,7 @@
                             <div class="question_form_content">
                                 <div class></div>
                                 <button class="button_submit" onclick="submit()">
-                                    <div class="button_content">提交</div>
+                                    <div class="button_content">submit</div>
                                 </button>
                             </div>
                         </div>
@@ -977,18 +981,21 @@
         $('input[type=radio][name=question7]').change(function () {
             if (this.value === '1') {
                 $("#question_8_all").show();
-                document.getElementById("question_8_content").innerText = ".Fuel oil consumption in a year (in liters)"
+                document.getElementById("question_8_content").innerText = ".Fuel oil consumption in a year (in liters)（roughly 500 kg/m³）"
             } else if (this.value === '2') {
                 $("#question_8_all").show();
                 document.getElementById("question_8_content").innerText = ".Natural gas consumption in a year (in cubic meter)"
             } else if (this.value === '3') {
                 $("#question_8_all").show();
-                document.getElementById("question_8_content").innerText = ".Firewood consumption in a year (in kg)"
+                document.getElementById("question_8_content").innerText = ".Firewood consumption in a year (in kg)（roughly 500 kg/m³）"
             } else if (this.value === '4') {
                 $("#question_8_all").show();
                 document.getElementById("question_8_content").innerText = ".Lignitte coal Briquette consumption in a year (in kg)"
             } else if (this.value === '5') {
                 $("#question_8_all").hide();
+            }else if (this.value === '6') {
+                $("#question_8_all").show();
+                document.getElementById("question_8_content").innerText = ".District hearting consumption in a year (in kWh)"
             }
         });
     });

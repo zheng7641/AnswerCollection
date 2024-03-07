@@ -17,18 +17,44 @@
                     </div>
                 </div>
                 <div class="question_detail">
-                    <div id="img1" style="display: none;justify-content: center;"><img src="img/full_1.png" alt="Excellent"/></div>
-                    <div id="img2" style="display: none;justify-content: center;"><img src="img/full_2.png" alt="Good"/></div>
-                    <div id="img3" style="display: none;justify-content: center;"><img src="img/full_3.png" alt="Average"/></div>
-                    <div id="img4" style="display: none;justify-content: center;"><img src="img/full_4.png" alt="Poor"/></div>
-                    <div id="img5" style="display: none;justify-content: center;"><img src="img/full_5.png" alt="Very poor"/></div>
-                    <div id="img6" style="display: none;justify-content: center;"><img src="img/short_1.png" alt="no"/></div>
-                    <div id="img7" style="display: none;justify-content: center;"><img src="img/short_2.png" alt="maybe"/></div>
-                    <div id="img8" style="display: none;justify-content: center;"><img src="img/short_3.png" alt="yes"/></div>
+                    <div id="img1" style="display: none;justify-content: center;"><img src="img/full_1.png"
+                                                                                       alt="Excellent"/></div>
+                    <div id="img2" style="display: none;justify-content: center;"><img src="img/full_2.png" alt="Good"/>
+                    </div>
+                    <div id="img3" style="display: none;justify-content: center;"><img src="img/full_3.png"
+                                                                                       alt="Average"/></div>
+                    <div id="img4" style="display: none;justify-content: center;"><img src="img/full_4.png" alt="Poor"/>
+                    </div>
+                    <div id="img5" style="display: none;justify-content: center;"><img src="img/full_5.png"
+                                                                                       alt="Very poor"/></div>
+                    <div id="img6" style="display: none;justify-content: center;"><img src="img/short_1.png" alt="no"/>
+                    </div>
+                    <div id="img7" style="display: none;justify-content: center;"><img src="img/short_2.png"
+                                                                                       alt="maybe"/></div>
+                    <div id="img8" style="display: none;justify-content: center;"><img src="img/short_3.png" alt="yes"/>
+                    </div>
+
+                    <div style="justify-content: center;margin-top: 20px;">
+                        <span style="text-align: left;display:block;"> General Advice：</span>
+                        <span id="a1" style="text-align: left;display:none;"> A relatively inexpensive and simple measure for saving energy is to seal the windows and doors. The investment cost for the draught-excluder strips and the time you devote to this will soon be repaid by reduced heating costs.</span>
+                        <span id="a2" style="text-align: left;display:none;"> Many household items like mobile chargers, adjustable desks, beds, broadband modems, and cordless phones use power even when not active, as long as they are plugged in. To save energy, consider unplugging these devices or using power strips to easily turn off power when they're not in use.</span>
+                        <span id="a3" style="text-align: left;display:none;"> Set both the fridge and the freezer to the right temperature. The temperature recommended for the fridge is +5 degrees C and for the freezer, -18 degrees C. Every degree reduction in temperature increases the energy consumption by around 5 percent.</span>
+                        <span id="a4" style="text-align: left;display:none;"> Before going away for a longer time, lower the indoor temperature to around 15 degrees C. You could perhaps lower indoor temperature by a degree or two without feeling cold.</span>
+                        <span id="a5" style="text-align: left;display:none;"> Draw the curtains or close the Venetian blinds at night. You will then keep the heat in the room.</span>
+                        <span id="a6" style="text-align: left;display:none;"> Don’t place furniture close to the radiator. The heat will otherwise find it difficult to reach the rest of the room.</span>
+                        <span id="a7" style="text-align: left;display:none;"> Some lamps draw current even when they are switched off. This applies to the transformer of halogen lamps, which is the small box on the plug. Pull the plug out when you have switched off the lamp, or connect it to the socket across a branch outlet with switch.</span>
+                    </div>
+
+
+                    <div style="justify-content: center;margin-top: 20px;">
+                        <span style="text-align: left;display:block;"> Disclaimer：</span>
+                        <span style="text-align: left;display:block;"> NO renovation should be undertaken without first consulting with professionals.</span>
+                        <span style="text-align: left;display:block;"> If you want to take the next step of energy renovation, please contact the relevant municipalities energy advisor first.</span>
+                    </div>
+
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 
@@ -317,34 +343,41 @@
     var fullResult;
     var shortResult;
 
-    $(document).ready(function(){
+    $(document).ready(function () {
+
+        let idNum = Math.round(Math.random() * 6) + 1;
+
+        $("#a" + idNum).css("display", "block");
+
+
         fullResult = getUrlParam('fullResult');
         shortResult = getUrlParam('shortResult');
-        if(fullResult==='1'){
-            $("#img1").css("display","flex");
-        }else if(fullResult==='2'){
-            $("#img2").css("display","flex");
-        }else if(fullResult==='3'){
-            $("#img3").css("display","flex");
-        }else if(fullResult==='4'){
-            $("#img4").css("display","flex");
-        }else if(fullResult==='5'){
-            $("#img5").css("display","flex");
+        if (fullResult === '1') {
+            $("#img1").css("display", "flex");
+        } else if (fullResult === '2') {
+            $("#img2").css("display", "flex");
+        } else if (fullResult === '3') {
+            $("#img3").css("display", "flex");
+        } else if (fullResult === '4') {
+            $("#img4").css("display", "flex");
+        } else if (fullResult === '5') {
+            $("#img5").css("display", "flex");
         }
 
-        if(shortResult==='1'){
-            $("#img6").css("display","flex");
-        }else if(shortResult==='2'){
-            $("#img7").css("display","flex");
-        }else if(shortResult==='3'){
-            $("#img8").css("display","flex");
+        if (shortResult === '1') {
+            $("#img6").css("display", "flex");
+        } else if (shortResult === '2') {
+            $("#img7").css("display", "flex");
+        } else if (shortResult === '3') {
+            $("#img8").css("display", "flex");
         }
     });
 
     function getUrlParam(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
         var r = window.location.search.substr(1).match(reg);  //匹配目标参数
-        if (r != null) return unescape(r[2]); return null; //返回参数值
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值
     }
 </script>
 
