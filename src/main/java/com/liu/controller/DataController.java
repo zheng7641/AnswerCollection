@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.ServletException;
 import java.io.IOException;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -30,7 +31,7 @@ public class DataController {
     }
 
     @RequestMapping("/loadData")
-    public Map<Object, Object> loadData() {
+    public List<Map<Object, Object>> loadData() {
         return dataMapper.loadData();
     }
 
